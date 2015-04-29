@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERS4", "ERS4\ERS4.csproj", "{DAE43D42-1200-4333-9FFD-1BF5E14DEAB6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{D883F3D0-9BD2-4420-A0B7-9B52EA1FC2D6}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{3018F32F-85B3-4870-A750-07DA0B7910C7}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\AzureWebsitePublishModule.psm1 = PublishScripts\AzureWebsitePublishModule.psm1
+		PublishScripts\Publish-WebApplicationWebsite.ps1 = PublishScripts\Publish-WebApplicationWebsite.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configurations", "{852CE074-80FB-4F38-A284-2152E4AAA2C6}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Configurations\ERS4-WAWS-dev.json = PublishScripts\Configurations\ERS4-WAWS-dev.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DAE43D42-1200-4333-9FFD-1BF5E14DEAB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAE43D42-1200-4333-9FFD-1BF5E14DEAB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAE43D42-1200-4333-9FFD-1BF5E14DEAB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAE43D42-1200-4333-9FFD-1BF5E14DEAB6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{852CE074-80FB-4F38-A284-2152E4AAA2C6} = {3018F32F-85B3-4870-A750-07DA0B7910C7}
+	EndGlobalSection
+EndGlobal

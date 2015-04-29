@@ -1,0 +1,69 @@
+﻿@model IEnumerable<ERS4.Models.EmployeeModels>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FIRSTNAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LASTNAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.USERNAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STARTDATE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DEPARTMENT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SALES)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RATING)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FIRSTNAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LASTNAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.USERNAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.STARTDATE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DEPARTMENT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SALES)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RATING)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

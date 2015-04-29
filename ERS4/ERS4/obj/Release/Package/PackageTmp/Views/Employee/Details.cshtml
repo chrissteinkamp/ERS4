@@ -1,0 +1,74 @@
+﻿@model ERS4.Models.EmployeeModels
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>EmployeeModels</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FIRSTNAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FIRSTNAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LASTNAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LASTNAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USERNAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USERNAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.STARTDATE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.STARTDATE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DEPARTMENT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DEPARTMENT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SALES)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SALES)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RATING)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RATING)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
