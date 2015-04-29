@@ -12,6 +12,7 @@ using ERS4.Models;
 
 namespace ERS4.Controllers
 {
+    [RequireHttps]
     [Authorize]
     public class AccountController : Controller
     {

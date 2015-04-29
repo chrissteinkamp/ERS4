@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ERS4.Models
 {
+   
     public class ExternalLoginConfirmationViewModel
     {
         [Required]

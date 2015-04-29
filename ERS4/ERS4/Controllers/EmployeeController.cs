@@ -10,6 +10,7 @@ using ERS4.Models;
 
 namespace ERS4.Controllers
 {
+    [RequireHttps]
     public class EmployeeController : Controller
     {
         private EmployeeDBContext db = new EmployeeDBContext();
