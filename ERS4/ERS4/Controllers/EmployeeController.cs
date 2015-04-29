@@ -15,9 +15,31 @@ namespace ERS4.Controllers
         private EmployeeDBContext db = new EmployeeDBContext();
 
         // GET: Employee
-        public ActionResult Index()
+        public ActionResult Index(string rate, string searchString)
         {
-            return View(db.Employee.ToList());
+            var rateLst = new List<string>();
+
+            var RateQry = from r in db.Employee
+                           orderby r.RATING
+                           select r.RATING;
+
+            rateLst.AddRange(RateQry.Distinct());
+            ViewBag.rate = new SelectList(rateLst);
+
+            var rates = from e in db.Employee
+                         select e;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                rates = rates.Where(s => s.LASTNAME.Contains(searchString));
+            }
+
+            if (!string.IsNullOrEmpty(rate))
+            {
+                rates = rates.Where(x => x.RATING == rate);
+            }
+
+            return View(rates);
         }
 
         // GET: Employee/Details/5
